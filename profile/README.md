@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://mersel.io/favicon.ico" width="80" alt="Mersel" />
+  <img src="./logo.svg" width="250" alt="Mersel" />
 </p>
 
-<h1 align="center">Mersel Open Source</h1>
+<h1 align="center">Open Source</h1>
 
 <p align="center">
   Türkiye e-Dönüşüm ekosistemi için açık kaynak mikroservisler geliştiriyoruz.
