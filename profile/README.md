@@ -51,6 +51,23 @@ Playwright (Chromium) ve PdfSharpCore ile geliştirilmiş, hafif ve yüksek kali
 
 ---
 
+### 👥 [gib-user-list](https://github.com/mersel-os/gib-user-list)
+
+GİB e-Fatura ve e-İrsaliye mükellef listelerini senkronize eden ve sorgulatan mikroservis.
+
+- **~200 MB RAM ile tam senkronizasyon** — Stream tabanlı XML parsing, milyonlarca kaydı düşük bellek kullanımıyla işler
+- **Sıfır kesinti güncelleme** — PostgreSQL Materialized View ile güncelleme sırasında API kesintiye uğramaz
+- **Veritabanı bağımsız** — Kendi uygulamalarınız hangi DB'yi kullanırsa kullansın, HTTP API ile entegre olur
+- **Delta sync desteği** — `/changes` endpoint'i ile sadece değişiklikleri takip edin
+- **İstemci SDK** — .NET için hazır NuGet paketi ([`MERSEL.Services.GibUserList.Client`](https://www.nuget.org/packages/MERSEL.Services.GibUserList.Client))
+- **HMAC kimlik doğrulama** — Internal servis güvenliği için opsiyonel HMAC-SHA256
+- **Webhook bildirimleri** — Slack ve HTTP webhook desteği ile sync durumu takibi
+- **Observability** — OpenTelemetry + Prometheus metrikleri, hazır Grafana dashboard
+
+> .NET 9 · PostgreSQL · EF Core 9 · Minimal API · Docker · Kubernetes · NuGet
+
+---
+
 ## Kullanım Alanları
 
 Bu servisler, e-Dönüşüm yazılımlarında yaygın olarak ihtiyaç duyulan bileşenlerdir:
@@ -61,6 +78,9 @@ Bu servisler, e-Dönüşüm yazılımlarında yaygın olarak ihtiyaç duyulan bi
 | e-Fatura/e-İrsaliye XML → HTML görüntüleme | [ebelge-xslt-service](https://github.com/mersel-os/ebelge-xslt-service) |
 | HTML fatura/rapor → PDF dönüştürme | [html-to-pdf](https://github.com/mersel-os/html-to-pdf) |
 | wkhtmltopdf'den modern altyapıya geçiş | [html-to-pdf](https://github.com/mersel-os/html-to-pdf) |
+| e-Fatura/e-İrsaliye mükellef sorgulama | [gib-user-list](https://github.com/mersel-os/gib-user-list) |
+| GİB mükellef listesi senkronizasyonu | [gib-user-list](https://github.com/mersel-os/gib-user-list) |
+| VKN/TCKN ile mükellef doğrulama | [gib-user-list](https://github.com/mersel-os/gib-user-list) |
 
 ## Katkıda Bulunma
 
